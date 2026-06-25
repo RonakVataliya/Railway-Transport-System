@@ -13,9 +13,6 @@ Built with **PostgreSQL**, documented with ERDs and relational schema diagrams, 
 - [Relational Schema](#-relational-schema)
 - [Database Schema Summary](#-database-schema-summary)
 - [Analytical Queries](#-analytical-queries)
-- [How to Run](#-how-to-run)
-- [C++ Application](#-c-application)
-- [Repository Structure](#-repository-structure)
 - [Tech Stack](#-tech-stack)
 - [License](#-license)
 
@@ -110,73 +107,6 @@ The schema lives in the `DB_Project` PostgreSQL schema and contains **22 tables*
 
 ---
 
-## ▶ How to Run
-
-**Prerequisites:** PostgreSQL 13+
-
-```sql
--- 1. Create the schema
-\i schema/RTDS_DDL.sql
-
--- 2. Load sample data
-\i schema/Insertion_Script.sql
-
--- 3. Run queries
-\i schema/Query_Solutions.sql
-```
-
-Or connect via `psql`:
-
-```bash
-psql -U your_user -d your_database -f schema/RTDS_DDL.sql
-psql -U your_user -d your_database -f schema/Insertion_Script.sql
-```
-
-> All objects are created under the `DB_Project` schema. Make sure your `search_path` is set accordingly, or prefix tables with `DB_Project.table_name`.
-
----
-
-## 💻 C++ Application
-
-`app/railway_app.cpp` is a console application that connects to the RTDS PostgreSQL database (via `libpq`) and provides basic interactive querying — train search, PNR lookup, and booking listing.
-
-**Build:**
-
-```bash
-g++ -o railway_app app/railway_app.cpp -lpq
-./railway_app
-```
-
-> Requires `libpq-dev` installed (`sudo apt install libpq-dev` on Debian/Ubuntu).
-
----
-
-## 📁 Repository Structure
-
-```
-RTDS/
-├── README.md
-├── schema/
-│   ├── RTDS_DDL.sql              ← Table definitions (22 tables)
-│   ├── Insertion_Script.sql      ← Sample data
-│   └── Query_Solutions.sql       ← 50 analytical queries
-├── diagrams/
-│   ├── RTDS_FINAL_ERD.png        ← Final ERD export
-│   ├── RTDS_Relational_Schema.png
-│   └── source/                   ← Dia source files
-│       ├── ERD_Stage1.dia
-│       ├── ERD_Stage2.dia
-│       └── Relational_Schema_Final.dia
-├── docs/
-│   ├── ERD_Report.pdf
-│   └── Relational_Schema_Report.pdf
-├── app/
-│   └── railway_app.cpp
-└── LICENSE
-```
-
----
-
 ## 🛠 Tech Stack
 
 | Tool | Purpose |
@@ -184,10 +114,5 @@ RTDS/
 | PostgreSQL 15 | Primary RDBMS |
 | SQL (DDL + DML) | Schema definition, data insertion, analytical queries |
 | Dia Diagram Editor | ERD and relational schema diagrams |
-| C++ (`libpq`) | Console application |
 
 ---
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
