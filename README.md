@@ -37,7 +37,7 @@ The schema was designed in two iterative stages (ERD Stage 1 → ERD Stage 2 →
 
 ![Final ERD](diagrams/RTDS_FINAL_ERD.png)
 
-> The ERD was drawn using [Dia Diagram Editor](http://dia-installer.de/). Source `.dia` files are in `diagrams/source/`.
+> The ERD was drawn using [Dia Diagram Editor](http://dia-installer.de/). Source `.dia` files are provided in this repository.
 
 ---
 
