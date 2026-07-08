@@ -14,7 +14,6 @@ Built with **PostgreSQL**, documented with ERDs and relational schema diagrams, 
 - [Database Schema Summary](#-database-schema-summary)
 - [Analytical Queries](#-analytical-queries)
 - [Tech Stack](#-tech-stack)
-- [License](#-license)
 
 ---
 
