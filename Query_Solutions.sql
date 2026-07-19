@@ -1,4 +1,4 @@
-SET SEARCH_PATH TO r;
+SET SEARCH_PATH TO RTDS_DB;
 
 -- 1) Just pulling all trains from Delhi to Mumbai in this time range with their route and type.
 SELECT 
