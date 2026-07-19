@@ -230,3 +230,11 @@ CREATE TABLE live_train_status (
     CONSTRAINT fk_lts_schedule FOREIGN KEY (schedule_train_id, schedule_starting_ts) 
         REFERENCES schedule(train_id, starting_ts) ON DELETE CASCADE
 );
+
+ALTER TABLE zone ADD CONSTRAINT zone_name_unique UNIQUE (zone_name);
+ALTER TABLE department ADD CONSTRAINT dept_name_unique UNIQUE (dept_name);
+ALTER TABLE route ADD CONSTRAINT route_name_unique UNIQUE (route_name);
+ALTER TABLE train_class ADD CONSTRAINT class_name_unique UNIQUE (class_name);
+ALTER TABLE tickets ADD CONSTRAINT transaction_id_unique UNIQUE (transaction_id);
+ALTER TABLE train ALTER COLUMN loco_id SET NOT NULL;
+ALTER TABLE train ADD CONSTRAINT loco_id_unique UNIQUE (loco_id);
